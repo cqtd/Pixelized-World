@@ -1,0 +1,18 @@
+{
+    "name": "Craftory.Editor",
+    "rootNamespace": "Craftory.Editor",
+    "references": [
+        "GUID:a97880f11063a324b99913a1652f05aa"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
