@@ -22,13 +22,13 @@ namespace Pixelo.UI
 			@group.alpha = 0;
 			@group.interactable = false;
 			@group.blocksRaycasts = false;
-			
+
 			bonobono.gameObject.SetActive(false);
 			image.gameObject.SetActive(false);
 			scoreValueText.gameObject.SetActive(false);
 			button.gameObject.SetActive(false);
 		}
-		
+
 		private void Start()
 		{
 			Game.instance.onGameOver += OnGameOver;
@@ -47,7 +47,7 @@ namespace Pixelo.UI
 			while (value < 0.99f)
 			{
 				@group.alpha = value;
-				
+
 				value += Time.deltaTime * fadeSpeed;
 				yield return null;
 			}
@@ -56,25 +56,27 @@ namespace Pixelo.UI
 
 			@group.interactable = true;
 			@group.blocksRaycasts = true;
-			
+
 			yield return new WaitForSeconds(1.0f);
-			
+
 			scoreValueText.gameObject.SetActive(true);
-			
+
 			yield return new WaitForSeconds(1.0f);
-			
+
 			bonobono.gameObject.SetActive(true);
 			yield return new WaitForSeconds(1.0f);
-			
+
 			image.gameObject.SetActive(true);
 			yield return new WaitForSeconds(1.0f);
-			
+
 			button.gameObject.SetActive(true);
-			
-			button.onClick.AddListener(() =>
-			{
-				SceneManager.LoadScene(0);
-			});
+
+			button.onClick.AddListener(() => { SceneManager.LoadScene(0); });
+		}
+
+		public void OpenSc()
+		{
+			SceneManager.LoadScene(0);
 		}
 	}
 }
