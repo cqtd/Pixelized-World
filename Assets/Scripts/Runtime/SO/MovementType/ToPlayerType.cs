@@ -7,7 +7,7 @@ namespace Pixelo
 	{
 		public override void Move(Transform target, Vector3 velocity)
 		{
-			target.transform.position += Time.deltaTime * velocity;
+			target.transform.position += Game.deltaTime * velocity;
 
 		}
 	}

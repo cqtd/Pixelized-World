@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,6 +16,9 @@ namespace Pixelo
         public Module root;
 
         public bool isAlive;
+        public bool isInvincible;
+
+        public Action<EnemyDefinition> onAttackEnemy;
 
         private void Start()
         {
@@ -26,6 +31,19 @@ namespace Pixelo
             }
         }
 
+        private Module lastAttached;
+
+        public void Attach(BlockDefinition def)
+        {
+            // var socket = new DefaultBlockSlot()
+            // {
+            //     x = lastAttached.x > 0 ? lastAttached.x + 1 : lastAttached.x - 1,
+            //     y = lastAttached.y > 0 ? lastAttached.y + 1 : lastAttached.y - 1,
+            // };
+            //
+            // AttachBlock(socket, lastAttached.transform, lastAttached);
+        }
+
         private Module AttachBlock(DefaultBlockSlot slot, Transform parent, Module owner = null)
         {
             Module instance = Instantiate(slot.definition.prefab, parent).GetComponent<Module>();
@@ -33,6 +51,10 @@ namespace Pixelo
             instance.children = new List<Module>();
             instance.transform.localPosition = new Vector3(Constant.PLAYER_SIZE * slot.x, Constant.PLAYER_SIZE * slot.y, 0f);
             instance.gameObject.layer = 7;
+            instance.x = slot.x;
+            instance.y = slot.y;
+
+            lastAttached = instance;
             
             if (owner == null)
             {
@@ -58,26 +80,34 @@ namespace Pixelo
             {
                 colliders.Remove(col2d);
             }
-            
+
+            // Instantiate(m_explosion, instance.transform.position, Quaternion.identity);
             Destroy(instance.gameObject);
         }
 
         public void SetInvincible(bool invincible)
         {
-            foreach (Collider2D collider2D1 in colliders)
-            {
-                collider2D1.enabled = !invincible;
-            }
+            isInvincible = invincible;
+            
+            // foreach (Collider2D collider2D1 in colliders)
+            // {
+            //     collider2D1.enabled = !invincible;
+            // }
         }
 
         public void GameOver()
         {
-            Instantiate(m_explosion, transform.position, Quaternion.identity);
+            DetachModule(root);
             
+            Instantiate(m_explosion, transform.position, Quaternion.identity);
+            isAlive = false;
+            
+            Game.instance.onGameOver?.Invoke();
+
 #if UNITY_EDITOR
             // Time.timeScale = 0f;
-#else            
-            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+#else
+            // UnityEngine.SceneManagement.SceneManager.LoadScene(0);
 #endif
         }
     }

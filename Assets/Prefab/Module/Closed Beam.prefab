@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 628305976231242596}
   - component: {fileID: 628305976231242594}
-  - component: {fileID: 628305976231242597}
   - component: {fileID: 628305976231242595}
   - component: {fileID: -3503639518254334457}
+  - component: {fileID: 7786750445757893907}
   m_Layer: 0
   m_Name: Closed Beam
   m_TagString: Player
@@ -86,29 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &628305976231242597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628305976231242599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e82333dd81244d99bfb44f62f5082d1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_block: {fileID: 11400000, guid: 7b42bab82c85aa446944e94a4920f6fe, type: 2}
-  parent: {fileID: 0}
-  children: []
-  prefabBullet: {fileID: -149676007586381910, guid: bb28bb97ce05545468174c8df5acc636,
-    type: 3}
-  interval: 1
-  speed: 40
-  direction: {x: 0, y: 0, z: 1}
-  toPlayer: 0
-  isMissile: 0
-  targets: []
 --- !u!61 &628305976231242595
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -147,6 +124,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c3f3d16c9fc44059e2d72e32785e30a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7786750445757893907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628305976231242599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ed964d00b9c4757b5a45eb5e8a4f2c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_block: {fileID: 11400000, guid: 7b42bab82c85aa446944e94a4920f6fe, type: 2}
+  parent: {fileID: 0}
+  children: []
+  prefabBullet: {fileID: 0}
+  interval: 1
+  speed: 40
+  direction: {x: 0, y: 0, z: 1}
+  toPlayer: 0
+  isMissile: 0
+  targets: []
+  rayCount: 1
+  rayRadius: 5
+  _interval: 2
 --- !u!1 &7458443527907392092
 GameObject:
   m_ObjectHideFlags: 0

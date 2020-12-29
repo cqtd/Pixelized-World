@@ -21,12 +21,12 @@ namespace Pixelo
 
 			// How fast turn it can be.
 			float rate = 4.0f;
-			float z = Mathf.Sin(Time.time * rate) * radius;
-			float x = Mathf.Cos(Time.time * rate) * radius;
+			float z = Mathf.Sin(Game.time * rate) * radius;
+			float x = Mathf.Cos(Game.time * rate) * radius;
 			Vector3 localCirclePosition = new Vector3(x, 0, z);
 
 			// Calculate the body position to move down.
-			this.hiddenPosition += Time.deltaTime * velocity;
+			this.hiddenPosition += Game.deltaTime * velocity;
 			
 			// The final position is combined with two vectors.
 			// One is its own position.

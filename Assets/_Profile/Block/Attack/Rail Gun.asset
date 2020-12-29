@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Rail Gun
   m_EditorClassIdentifier: 
   blockColor: {r: 0, g: 0, b: 0, a: 0}
-  blockName: 
+  prefab: {fileID: 0}
+  blockName: "\uB808\uC77C\uAC74"
+  blockDesc: "\uC9C1\uC120 \uBC29\uD5A5\uC758 \uBAA8\uB4E0 \uC801\uC744 \uC81C\uAC70\uD569\uB2C8\uB2E4"

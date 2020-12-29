@@ -7,6 +7,8 @@ namespace Pixelo
 	[DefaultExecutionOrder(Constant.Order.ENEMY)]
 	public class Enemy : MonoBehaviour
 	{
+		public EnemyDefinition definition;
+		
 		public MovementType type;
 		private Vector3 direction;
 		public float speed = 3f;
@@ -33,6 +35,11 @@ namespace Pixelo
 
 			isDead = true;
 			Destroy(gameObject);
+		}
+		
+		public void OnDamage()
+		{
+			OnDamage(transform.position);
 		}
 
 		IEnumerator FireCoroutine()

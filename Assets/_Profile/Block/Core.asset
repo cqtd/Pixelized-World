@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Core
   m_EditorClassIdentifier: 
   blockColor: {r: 1, g: 0.70980394, b: 0, a: 1}
-  blockName: Core
   prefab: {fileID: 628305976231242599, guid: 9e5376a8212fd2e4fac5be865e54ed46, type: 3}
+  blockName: Core
+  blockDesc: "\uCF54\uC5B4\uBE14\uB85D\uC774 \uBAA8\uB450 \uD30C\uAD34\uB418\uBA74
+    \uAC8C\uC784\uC624\uBC84\uB429\uB2C8\uB2E4"

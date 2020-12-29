@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Closed Beam
   m_EditorClassIdentifier: 
   blockColor: {r: 0.042452812, g: 1, b: 0.76971406, a: 1}
-  blockName: Closed Beam
   prefab: {fileID: 628305976231242599, guid: 42cf8d85b4a5de148aafa9b21322bda1, type: 3}
+  blockName: "\uB531\uCD1D"
+  blockDesc: "\uB450\uB450\uB450\uB2E4\uB2E4\uB2E4!"

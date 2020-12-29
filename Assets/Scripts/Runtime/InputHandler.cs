@@ -22,8 +22,51 @@ namespace Pixelo
             canDash = true;
         }
 
+        private bool pause = false;
+        
         private void Update()
         {
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                SceneManager.LoadScene(0);
+            }
+
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                if (pause)
+                {
+                    Time.timeScale = 1.0f;
+                }
+                else
+                {
+                    Time.timeScale = 0.0f;
+                }
+
+                pause = !pause;
+            }
+#endif
+
+            if (!Game.instance.ship.isAlive)
+            {
+                _rigidbody.velocity = Vector2.zero;
+                return;
+            }
+            
+            ProcessInput();
+        }
+
+        /// <summary>
+        /// 키보드 인풋 매니징
+        /// </summary>
+        private void ProcessInput()
+        {
+            if (Game.instance.IsPaused)
+            {
+                _rigidbody.velocity = Vector2.zero;
+                return;
+            }
+            
             float horizontal = Input.GetAxis("Horizontal");
             float vertical = Input.GetAxis("Vertical");
             
@@ -33,7 +76,7 @@ namespace Pixelo
             if (isDashing)
             {
                 velocity *= dash;
-                _dashed += velocity.magnitude * Time.deltaTime;
+                _dashed += velocity.magnitude * Game.deltaTime;
 
                 if (_dashed > dashMax)
                 {
@@ -45,18 +88,17 @@ namespace Pixelo
             }
             
             _rigidbody.velocity = velocity;
-
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                SceneManager.LoadScene(0);
-            }
-
+            
+            
             if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
             {
                 Dash();
             }
         }
 
+        /// <summary>
+        ///  대쉬 실행
+        /// </summary>
         private void Dash()
         {
             if (!canDash) return;
@@ -64,9 +106,14 @@ namespace Pixelo
             StartCoroutine(DashCoroutine());
         }
 
-
+        /// <summary>
+        /// 대쉬 코루틴
+        /// </summary>
+        /// <returns></returns>
         private IEnumerator DashCoroutine()
         {
+            Game.instance.onDashCooldown?.Invoke();
+
             canDash = false;
             isDashing = true;
             

@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Patriot Missile
   m_EditorClassIdentifier: 
   blockColor: {r: 0, g: 0, b: 0, a: 0}
-  blockName: 
+  prefab: {fileID: 0}
+  blockName: "\uD328\uD2B8\uB9AC\uC5B4\uD2B8"
+  blockDesc: "\uADFC\uC811\uD558\uB294 \uCD1D\uC54C\uACFC \uC801\uC744 \uC694\uACA9\uD569\uB2C8\uB2E4"

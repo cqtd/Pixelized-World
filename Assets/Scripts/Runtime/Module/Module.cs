@@ -12,6 +12,8 @@ namespace Pixelo
 		public List<Module> children = default;
 
 		protected SpriteRenderer _renderer = default;
+		public int x;
+		public int y;
 		
 		protected virtual void Awake()
 		{
@@ -30,6 +32,8 @@ namespace Pixelo
 		
 		private void OnTriggerEnter2D(Collider2D other)
 		{
+			if (Game.instance.ship.isInvincible) return;
+			
 			if (other.CompareTag("Enemy"))
 			{
 				Module block = GetComponent<Module>();

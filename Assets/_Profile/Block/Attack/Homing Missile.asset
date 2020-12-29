@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Homing Missile
   m_EditorClassIdentifier: 
   blockColor: {r: 0, g: 0, b: 0, a: 0}
-  blockName: 
+  prefab: {fileID: 0}
+  blockName: "\uD638\uBC0D \uBBF8\uC0AC\uC77C"
+  blockDesc: "\uB79C\uB364\uD55C \uC801\uC5D0\uAC8C \uBBF8\uC0AC\uC77C\uC744 \uC3E9\uB2C8\uB2E4"

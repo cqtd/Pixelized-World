@@ -6,8 +6,10 @@ namespace Pixelo
 	public class BlockDefinition : ScriptableObject
 	{
 		public Color blockColor = default;
-		public string blockName = default;
 		public GameObject prefab = default;
 
+		[Header("Block Info")]
+		public string blockName = default;
+		public string blockDesc = default;
 	}
 }

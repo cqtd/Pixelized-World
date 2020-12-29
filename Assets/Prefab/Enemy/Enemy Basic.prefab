@@ -145,10 +145,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc1f6ebad25400fbc1748dcc0baa1da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  definition: {fileID: 11400000, guid: 30d0bd3b689f87b41b8a0afbe4853113, type: 2}
   type: {fileID: 11400000, guid: 272df1ffbe22d4b43986002700e109cd, type: 2}
   speed: 7
   dieEffect: {fileID: 5677757216019247570, guid: bf40cb5230fb190428aa3133893afa94,
     type: 3}
+  m_interval: 1
   isDead: 0
 --- !u!114 &8357249368129011331
 MonoBehaviour:

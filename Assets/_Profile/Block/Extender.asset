@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Extender
   m_EditorClassIdentifier: 
   blockColor: {r: 1, g: 1, b: 1, a: 1}
-  blockName: Extender
   prefab: {fileID: 628305976231242599, guid: 0f3e3f4cbbd2c4e44b02f3c71657c659, type: 3}
+  blockName: "\uC775\uC2A4\uD150\uB354"
+  blockDesc: "\uBB34\uAE30\uBE14\uB85D\uC744 \uB354 \uC7A5\uCC29\uD560 \uC218 \uC788\uB294
+    \uC5F0\uC7A5\uBE14\uB85D"

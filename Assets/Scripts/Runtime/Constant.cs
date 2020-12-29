@@ -11,6 +11,7 @@
 			public const int GAME = -500;
 			public const int ENEMY_SPAWNER = -400;
 			public const int ENEMY = -380;
+			public const int UI = 100;
 		}
 	}
 }

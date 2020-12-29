@@ -35,7 +35,7 @@ namespace Pixelo
 		{
 			targets = new List<GameObject>();
 			
-			StartCoroutine(FireLoop());
+			// StartCoroutine(FireLoop());
 		}
 
 		IEnumerator FireLoop()
