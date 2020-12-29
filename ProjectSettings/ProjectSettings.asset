@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 22
-  productGUID: b69a96080ab876740aedc1077b18871c
+  productGUID: 66dc04c20db5290488c5ab37c5056b75
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -66,7 +66,7 @@ PlayerSettings:
   disableDepthAndStencilBuffers: 0
   androidStartInFullscreen: 1
   androidRenderOutsideSafeArea: 1
-  androidUseSwappy: 1
+  androidUseSwappy: 0
   androidBlitType: 0
   defaultIsNativeResolution: 1
   macRetinaSupport: 1
@@ -146,6 +146,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
+    Android: com.sunduk.minimalshooting
     Standalone: com.Cqunity.PixelizedWorld
   buildNumber:
     Standalone: 0
@@ -225,8 +226,8 @@ PlayerSettings:
   iOSAutomaticallyDetectAndAddCapabilities: 1
   appleEnableProMotion: 0
   shaderPrecisionModel: 0
-  clonedFromGUID: c0afd0d1d80e3634a9dac47e8a0426ea
-  templatePackageId: com.unity.template.3d@5.0.4
+  clonedFromGUID: d95a48653d97d1b4fad937909e5558f3
+  templatePackageId: 
   templateDefaultScene: Assets/Scenes/SampleScene.unity
   useCustomMainManifest: 0
   useCustomLauncherManifest: 0
@@ -258,7 +259,99 @@ PlayerSettings:
   AndroidValidateAppBundleSize: 1
   AndroidAppBundleSizeToValidate: 150
   m_BuildTargetIcons: []
-  m_BuildTargetPlatformIcons: []
+  m_BuildTargetPlatformIcons:
+  - m_BuildTarget: Android
+    m_Icons:
+    - m_Textures: []
+      m_Width: 432
+      m_Height: 432
+      m_Kind: 2
+      m_SubKind: 
+    - m_Textures: []
+      m_Width: 324
+      m_Height: 324
+      m_Kind: 2
+      m_SubKind: 
+    - m_Textures: []
+      m_Width: 216
+      m_Height: 216
+      m_Kind: 2
+      m_SubKind: 
+    - m_Textures: []
+      m_Width: 162
+      m_Height: 162
+      m_Kind: 2
+      m_SubKind: 
+    - m_Textures: []
+      m_Width: 108
+      m_Height: 108
+      m_Kind: 2
+      m_SubKind: 
+    - m_Textures: []
+      m_Width: 81
+      m_Height: 81
+      m_Kind: 2
+      m_SubKind: 
+    - m_Textures: []
+      m_Width: 192
+      m_Height: 192
+      m_Kind: 0
+      m_SubKind: 
+    - m_Textures: []
+      m_Width: 144
+      m_Height: 144
+      m_Kind: 0
+      m_SubKind: 
+    - m_Textures: []
+      m_Width: 96
+      m_Height: 96
+      m_Kind: 0
+      m_SubKind: 
+    - m_Textures: []
+      m_Width: 72
+      m_Height: 72
+      m_Kind: 0
+      m_SubKind: 
+    - m_Textures: []
+      m_Width: 48
+      m_Height: 48
+      m_Kind: 0
+      m_SubKind: 
+    - m_Textures: []
+      m_Width: 36
+      m_Height: 36
+      m_Kind: 0
+      m_SubKind: 
+    - m_Textures: []
+      m_Width: 192
+      m_Height: 192
+      m_Kind: 1
+      m_SubKind: 
+    - m_Textures: []
+      m_Width: 144
+      m_Height: 144
+      m_Kind: 1
+      m_SubKind: 
+    - m_Textures: []
+      m_Width: 96
+      m_Height: 96
+      m_Kind: 1
+      m_SubKind: 
+    - m_Textures: []
+      m_Width: 72
+      m_Height: 72
+      m_Kind: 1
+      m_SubKind: 
+    - m_Textures: []
+      m_Width: 48
+      m_Height: 48
+      m_Kind: 1
+      m_SubKind: 
+    - m_Textures: []
+      m_Width: 36
+      m_Height: 36
+      m_Kind: 1
+      m_SubKind: 
   m_BuildTargetBatching:
   - m_BuildTarget: Standalone
     m_StaticBatching: 1
@@ -573,7 +666,19 @@ PlayerSettings:
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    1: UNITY_POST_PROCESSING_STACK_V2
+    4: UNITY_POST_PROCESSING_STACK_V2
+    7: UNITY_POST_PROCESSING_STACK_V2
+    13: UNITY_POST_PROCESSING_STACK_V2
+    14: UNITY_POST_PROCESSING_STACK_V2
+    19: UNITY_POST_PROCESSING_STACK_V2
+    21: UNITY_POST_PROCESSING_STACK_V2
+    25: UNITY_POST_PROCESSING_STACK_V2
+    27: UNITY_POST_PROCESSING_STACK_V2
+    28: UNITY_POST_PROCESSING_STACK_V2
+    29: UNITY_POST_PROCESSING_STACK_V2
+    30: UNITY_POST_PROCESSING_STACK_V2
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
@@ -587,7 +692,7 @@ PlayerSettings:
   enableRoslynAnalyzers: 1
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 1
-  gcIncremental: 1
+  gcIncremental: 0
   gcWBarrierValidation: 0
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
@@ -611,7 +716,8 @@ PlayerSettings:
   metroDefaultTileSize: 1
   metroTileForegroundText: 2
   metroTileBackgroundColor: {r: 0.13333334, g: 0.17254902, b: 0.21568628, a: 0}
-  metroSplashScreenBackgroundColor: {r: 0.12941177, g: 0.17254902, b: 0.21568628, a: 1}
+  metroSplashScreenBackgroundColor: {r: 0.12941177, g: 0.17254902, b: 0.21568628,
+    a: 1}
   metroSplashScreenUseBackgroundColor: 0
   platformCapabilities: {}
   metroTargetDeviceFamilies: {}
