@@ -13,9 +13,11 @@ namespace Pixelo
         private List<Collider2D> colliders;
         public Module root;
 
+        public bool isAlive;
 
         private void Start()
         {
+            isAlive = true;
             colliders = new List<Collider2D>();
             
             foreach (DefaultBlockSlot defaultBlockSlot in m_defaultEngine)

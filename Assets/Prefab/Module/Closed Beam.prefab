@@ -101,7 +101,7 @@ MonoBehaviour:
   m_block: {fileID: 11400000, guid: 7b42bab82c85aa446944e94a4920f6fe, type: 2}
   parent: {fileID: 0}
   children: []
-  prefabBullet: {fileID: 2246129215633105459, guid: ccd7664252dd00c45a5ad4f26d7ae3fd,
+  prefabBullet: {fileID: -149676007586381910, guid: bb28bb97ce05545468174c8df5acc636,
     type: 3}
   interval: 1
   speed: 40

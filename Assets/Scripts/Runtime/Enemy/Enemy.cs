@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 namespace Pixelo
 {
+	[DefaultExecutionOrder(Constant.Order.ENEMY)]
 	public class Enemy : MonoBehaviour
 	{
 		public MovementType type;
@@ -42,6 +44,19 @@ namespace Pixelo
 				
 				yield return new WaitForSeconds(m_interval);
 			}
+		}
+
+		public static Action<Enemy> onEnemySpawn;
+		public static Action<Enemy> onEnemyDeath;
+
+		protected virtual void OnEnable()
+		{
+			onEnemySpawn?.Invoke(this);
+		}
+
+		protected virtual void OnDisable()
+		{
+			onEnemyDeath?.Invoke(this);
 		}
 	}
 }

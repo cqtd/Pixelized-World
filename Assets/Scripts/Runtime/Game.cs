@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using UniRx;
+using UnityEngine;
 
 namespace Pixelo
 {
@@ -10,9 +13,25 @@ namespace Pixelo
 		private void Awake()
 		{
 			instance = this;
+			StartCoroutine(ScoreByTime());
 		}
 
 		public Ship ship;
+		public Score score;
+		public BuffManager buff;
+
+		private IEnumerator ScoreByTime()
+		{
+			while (ship.isAlive)
+			{
+				int add = buff.isFeverTime ? 1 : 2;
+				score.lifeTimeScore.Value += add;
+				
+				yield return null;
+			}
+		}
+		
+		
 
 #if UNITY_EDITOR
 		[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSplashScreen)]
@@ -21,5 +40,17 @@ namespace Pixelo
 			instance = null;
 		}
 #endif
+	}
+
+	[Serializable]
+	public class Score
+	{
+		public ReactiveProperty<int> lifeTimeScore;
+	}
+
+	[Serializable]
+	public class BuffManager
+	{
+		public bool isFeverTime;
 	}
 }

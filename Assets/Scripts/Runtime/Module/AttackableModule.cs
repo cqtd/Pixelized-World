@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -68,10 +67,13 @@ namespace Pixelo
 					Bullet bullet = GameObject.Instantiate(this.prefabBullet);
 					bullet.transform.position = transform.position;
 					bullet.transform.rotation = transform.rotation;
+					
+					bullet.SetTarget(closest);
+					bullet.SetSpeed(10);
 				
 					// Set bullet properties.
-					bullet.SetDirection((closest.transform.position-transform.position).normalized);
-					bullet.SetSpeed(this.speed);
+					// bullet.SetDirection((closest.transform.position-transform.position).normalized);
+					// bullet.SetSpeed(this.speed);
 
 					isMissile = true;
 
@@ -82,14 +84,14 @@ namespace Pixelo
 						{
 							this.direction = (player.transform.position - transform.position).normalized;
 							bullet.transform.rotation = Quaternion.LookRotation(this.direction);
-							bullet.SetDirection(this.direction);
+							// bullet.SetDirection(this.direction);
 						}
 					}
 
 					// Missile.
 					if (this.isMissile)
 					{
-						bullet.SetFollowTarget();
+						// bullet.SetFollowTarget();
 					}
 				}
 			}

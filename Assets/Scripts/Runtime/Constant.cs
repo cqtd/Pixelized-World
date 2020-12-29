@@ -9,6 +9,8 @@
 		public static class Order
 		{
 			public const int GAME = -500;
+			public const int ENEMY_SPAWNER = -400;
+			public const int ENEMY = -380;
 		}
 	}
 }
