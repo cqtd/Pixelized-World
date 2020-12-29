@@ -136,23 +136,9 @@ namespace Pixelo
 
         void Move()
         {
-            Vector3 velocity = transform.forward * this.speed;
+            Vector3 velocity = transform.up * this.speed;
             transform.position += Time.deltaTime * velocity;
         }
-
-
-        void CheckArea()
-        {
-            // It is destroy when position is over.
-            if (transform.position.z >= 10.0f ||
-                transform.position.z <= -10.0f ||
-                transform.position.x >= 6.0f ||
-                transform.position.x <= -6.0f)
-            {
-                Destroy(gameObject);
-            }
-        }
-
 
         // Update is called once per frame
         void Update()
@@ -160,7 +146,6 @@ namespace Pixelo
             DetermineMissileTarget();
             DetermineDirection();
             Move();
-            // CheckArea();
         }
 	}
 }

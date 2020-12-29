@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5111844310930808301}
   - component: {fileID: 5111844310930808303}
   - component: {fileID: 5111844310930808296}
+  - component: {fileID: 1377999653806744290}
   - component: {fileID: 5111844310930808302}
   - component: {fileID: 8357249368129011331}
-  - component: {fileID: 1377999653806744290}
   m_Layer: 0
   m_Name: Enemy Basic
   m_TagString: Enemy
@@ -54,7 +54,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6b588ba1ad7766f47b68b3ed5a65e9f6, type: 2}
+  - {fileID: 2100000, guid: 47f0120f0ab71b04b92a27e5433775fb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fa79dddb67b69d745a370a84d87fc946, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bf6b4aa022008904992071b0c0cfe26b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,7 +103,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 0.64, y: 0.64}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -112,34 +112,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
---- !u!114 &5111844310930808302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5111844310930808297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bc1f6ebad25400fbc1748dcc0baa1da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: {fileID: 11400000, guid: 272df1ffbe22d4b43986002700e109cd, type: 2}
-  speed: 10
-  dieEffect: {fileID: 5677757216019247570, guid: bf40cb5230fb190428aa3133893afa94,
-    type: 3}
---- !u!114 &8357249368129011331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5111844310930808297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9abf33a4bb9947dc9c58ef3dbb02574a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &1377999653806744290
 Rigidbody2D:
   serializedVersion: 4
@@ -161,3 +133,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5111844310930808302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5111844310930808297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc1f6ebad25400fbc1748dcc0baa1da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: {fileID: 11400000, guid: 272df1ffbe22d4b43986002700e109cd, type: 2}
+  speed: 7
+  dieEffect: {fileID: 5677757216019247570, guid: bf40cb5230fb190428aa3133893afa94,
+    type: 3}
+  isDead: 0
+--- !u!114 &8357249368129011331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5111844310930808297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9abf33a4bb9947dc9c58ef3dbb02574a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
